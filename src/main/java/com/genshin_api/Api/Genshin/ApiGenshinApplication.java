@@ -1,7 +1,6 @@
 package com.genshin_api.Api.Genshin;
 
 import com.genshin_api.Api.Genshin.Principal.MenuDeEscolhas;
-import com.genshin_api.Api.Genshin.service.ConsumoApi;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

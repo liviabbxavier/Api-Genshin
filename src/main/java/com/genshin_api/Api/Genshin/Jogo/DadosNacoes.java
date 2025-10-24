@@ -7,5 +7,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 public record DadosNacoes(@JsonAlias("name") String nome,
                           @JsonAlias("element") String elemento,
-                          @JsonAlias("archon") String arconte) {
+                          @JsonAlias("archon") String arconte)
+{
+    @Override
+    public String toString() {
+        return
+                "\nNome: " + nome +
+                "\nElemento: " + elemento +
+                "\nArconte: " + arconte;
+    }
 }
