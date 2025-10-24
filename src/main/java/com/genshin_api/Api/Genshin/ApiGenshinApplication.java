@@ -1,6 +1,7 @@
 package com.genshin_api.Api.Genshin;
 
 import com.genshin_api.Api.Genshin.Principal.MenuDeEscolhas;
+import com.genshin_api.Api.Genshin.Principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,8 +18,7 @@ public class ApiGenshinApplication implements CommandLineRunner{
         MenuDeEscolhas menu = new MenuDeEscolhas();
         menu.menuEscolhas();
 
-//        ConsumoApi consumo = new ConsumoApi();
-//        String linkJson = consumo.obtemDados("https://genshin.jmp.blue/characters");
-//        System.out.println(linkJson);
+//        Principal menu1 = new Principal();
+//        menu1.menuEscolhas();
     }
 }
