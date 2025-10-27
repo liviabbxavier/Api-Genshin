@@ -12,20 +12,18 @@ public record DadosPersonagens(@JsonAlias("name") String nome,
                                @JsonAlias("gender") String genero,
                                @JsonAlias("nation") String nacao,
                                @JsonAlias("affiliation") String afiliacao,
-                               @JsonAlias("rarity") String raridade,
-                               @JsonAlias("constellation") String constelacao)
+                               @JsonAlias("rarity") String raridade)
 {
     @Override
     public String toString() {
         return
-                "\nNome: " + nome +
-                "\nTitulo: " + titulo +
-                "\nVisao: " + visao +
-                "\nArma: " + arma +
-                "\nGenero: " + genero +
-                "\nNacao: " + nacao +
-                "\nAfiliacao: " + afiliacao +
-                "\nRaridade: " + raridade +
-                "\nConstelaco: " + constelacao;
+                "\nNome: " + nome + "\n" +
+                "Titulo: " + titulo + "\n" +
+                "Visao: " + visao + "\n" +
+                "Arma: " + arma + "\n" +
+                "Genero: " + genero + "\n" +
+                "Nacao: " + nacao + "\n" +
+                "Afiliacao: " + afiliacao + "\n" +
+                "Raridade: " + raridade;
     }
 }

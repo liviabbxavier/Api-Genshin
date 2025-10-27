@@ -11,7 +11,7 @@ public record DadosElementos(@JsonAlias("name") String nome,
     @Override
     public String toString() {
         return
-                "\nNome: " + nome +
-                "\nReacoes: " + reacoes;
+                "\nNome: " + nome + "\n" +
+                "Reacoes: " + reacoes;
     }
 }

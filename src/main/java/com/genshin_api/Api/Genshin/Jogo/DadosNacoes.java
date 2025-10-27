@@ -12,8 +12,8 @@ public record DadosNacoes(@JsonAlias("name") String nome,
     @Override
     public String toString() {
         return
-                "\nNome: " + nome +
-                "\nElemento: " + elemento +
-                "\nArconte: " + arconte;
+                "\nNome: " + nome + "\n" +
+                "Elemento: " + elemento + "\n" +
+                "Arconte: " + arconte;
     }
 }

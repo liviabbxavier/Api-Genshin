@@ -9,8 +9,8 @@ import java.util.List;
 public record Personagens(String characters) {
     @Override
     public String toString() {
-        return "\nPersonagens: " +
-                "\nNome: " + characters;
+        return "\nPersonagens: " + "\n" +
+                "Nome: " + characters + "\n";
     }
     public static List<Personagens> listaDePersonagens;
 }

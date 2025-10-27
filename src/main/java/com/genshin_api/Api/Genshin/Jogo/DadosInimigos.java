@@ -12,8 +12,8 @@ public record DadosInimigos(@JsonAlias("name") String nome,
     @Override
     public String toString() {
         return
-                "\nNome: " + nome +
-                "\nTipo: " + tipo +
-                "\nElemento: " + elemento;
+                "\nNome: " + nome + "\n" +
+                "Tipo: " + tipo + "\n" +
+                "Elemento: " + elemento;
     }
 }
