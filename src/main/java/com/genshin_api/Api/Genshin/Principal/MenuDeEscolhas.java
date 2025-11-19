@@ -35,34 +35,32 @@ public class MenuDeEscolhas {
                     var json = consumo.obtemDados(ENDERECO + "characters");
                     try {
                         JsonNode jsonNode = mapper.readTree(json);
-                        String jsonFormatted = jsonNode.toPrettyString();
-                        System.out.println(jsonFormatted);
+
+                        if (jsonNode.isArray()) {
+                            for (JsonNode node : jsonNode) {
+                                System.out.println(node.asText());
+                            }
+                        } else {
+                            System.out.println("Resposta não é um array!");
+                        }
                     } catch (JsonProcessingException e) {
                         throw new RuntimeException(e);
                     }
                     System.out.println("Qual personagem voce deseja procurar?");
                     Scanner leituraPerso = new Scanner(System.in);
                     String buscaPersonagem = leituraPerso.nextLine();
+
                     json = consumo.obtemDados(ENDERECO + "characters/" + buscaPersonagem.replace(" ", "+"));
                     DadosPersonagens dados = conversor.obtemDados(json, DadosPersonagens.class);
-                    try {
-                        JsonNode jsonNode = mapper.readTree(json);
-                        String jsonFormatted = jsonNode.toPrettyString();
-                        System.out.println(jsonFormatted);
-                    } catch (JsonProcessingException e) {
-                        throw new RuntimeException(e);
-                    }
+                    System.out.println(dados);
                     break;
                 }
                 case 2: {
                     var json = consumo.obtemDados(ENDERECO + "elements");
-                    try {
-                        JsonNode jsonNode = mapper.readTree(json);
-                        String jsonFormatted = jsonNode.toPrettyString();
-                        System.out.println(jsonFormatted);
-                    } catch (JsonProcessingException e) {
-                        throw new RuntimeException(e);
-                    }
+                        String[] elementos = conversor.obtemDados(json, String[].class);
+                    System.out.println(elementos);
+                    MenuElementos menuElementos = new MenuElementos();
+                    menuElementos.EscolhaElementos();
                     break;
                 }
                 case 3: {
